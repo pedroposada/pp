@@ -1,0 +1,13 @@
+name = Product sort
+description = "Defines a sort order for products based on category, and provides back/forward links based on that."
+core = 7.x
+
+; TODO: Add dependencies
+dependencies[] = xautoload
+
+; Information added by drupal.org packaging script on 2012-07-21
+version = "7.x-1.0-alpha1+0-dev"
+core = "7.x"
+project = "treewalk"
+datestamp = "1342832972"
+

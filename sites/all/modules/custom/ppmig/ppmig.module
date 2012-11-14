@@ -10,3 +10,19 @@ function ppmig_migrate_api() {
   );
   return $api;
 }
+
+/**
+ * get mapped term(s)
+ */
+function ppmig_mappedterm(array $terms = array()){
+  $result = NULL;
+  
+  if (is_array($terms) && count($terms)) {
+  	$q = db_select('migrate_map_termarticle', 'm');
+    $q->condition('m.sourceid1', $terms, 'IN');
+  	$q->addField('m', 'destid1');
+  	$result = $q->execute()->fetchCol();
+  } 
+	
+	return !is_null($result) ? implode(',', $result) : NULL;
+}
