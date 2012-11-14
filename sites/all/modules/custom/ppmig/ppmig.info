@@ -3,10 +3,8 @@ description = "Migrate Data from D6 to D7."
 package = "custom"
 core = 7.x
 
-;dependencies[] = taxonomy
-
 files[] = ppmig.module
 files[] = ppmig.inc
-files[] = ppmig_term_article.inc
-files[] = ppmig_node_article.inc
-files[] = ppmig_comment_article.inc
+files[] = ppmig_term_section.inc
+;files[] = ppmig_node_article.inc
+;files[] = ppmig_comment_article.inc
