@@ -1,0 +1,119 @@
+/* body */
+html, body, .bb-n {
+	background: url(images/bg_body.gif) repeat-x 0 0 #E7FBF8;
+}
+
+/* front page slide show */
+div.slide-show-panel .galleria-stage {
+	height:380px;
+}
+/* list of links */
+.block .item-list ul {
+	margin-left: 0px;
+	list-style: none;
+}
+/* search box */
+#search-form input#edit-keys, 
+#block-search-form .form-item-search-block-form input {
+	width: 300px;
+}
+#search-block-form input.form-submit:hover, 
+#search-block-form input.form-submit:focus, 
+#search-form input.form-submit:hover, 
+#search-form input.form-submit:focus {
+	margin-top:5px;
+}
+#search-block-form input.form-submit, #search-form input.form-submit {
+	margin-top: 5px;
+}
+
+/* prev next links */
+div.field-name-ppglue-prevnext {
+	height: 20px;
+}
+ul.prevnext-list li {
+	display: inline;
+}
+ul.prevnext-list li.prev {
+	float: left;
+}
+ul.prevnext-list li.next {
+	float: right;
+}
+
+/* summary list items */
+.display-summary-list-style ul.views-summary li {
+	display: block;
+	height: 14px;
+	clear: both;
+/*	padding-bottom: 10px;*/
+	margin-bottom: 10px;
+}
+.display-summary-list-style ul.views-summary li a {
+	display: block;
+	padding-left:3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.display-summary-list-style ul.views-summary li a:hover {
+	background: #D8DFEA;
+}
+.display-summary-list-style ul.views-summary li span.items-count {
+	background: #D8DFEA;
+	float:right;
+	padding: 0 3px 0 3px;
+	font-size: 12px;
+	position:relative;
+	right:0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-top: -20px;
+	margin-right: 3px;
+}
+
+/* node project */
+.node-project .group-right {
+/*	margin-left: 5px;*/
+}
+
+/* node teaser bottom links */
+.node ul.links {
+    text-transform:capitalize;
+}
+.node ul.links li a {
+    padding: 0;
+}
+
+/* node teasers */
+.article_teaser, .article-teaser-row {
+	margin-bottom:30px;
+}
+.article_teaser .title{
+	font-size: 24px;
+}
+.article_teaser .field-name-body {
+	padding:0;
+}
+
+/* comments form */
+.comment-form {
+	padding: 5px;
+	background-color: #EEEEEE;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.comment-form .form-item {
+	margin: 0;
+	padding: 0;
+}
+.comment-form .username {
+	padding-left: 3px;
+}
+.comment-form .form-actions {
+	padding: 0;
+	text-align: right;
+	margin: 0;
+}

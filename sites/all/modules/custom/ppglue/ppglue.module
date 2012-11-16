@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * Implementation of hook_theme();
+ */
+function ppglue_theme($existing, $type, $theme, $path) {
+	return array(
+		// next and prev links by content type
+    'ppglue_prevnext' => array(
+      'variables' => array(),
+      'file' => 'ppglue.theme.inc',
+    ),
+	);
+}
+
+/**
+ * Implementation of hook_ctools_plugin_api();
+ */
+function ppglue_ctools_plugin_api($module, $api) {
+  if (($module == 'ds' && $api == 'ds') || ($module == 'ppglue' && $api == 'ppglue')) {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implementation of hook_ds_fields_info();
+ */
+function ppglue_ds_fields_info($entity_type) {
+  $data = array();
+
+  // fields for common entity types
+  if ($entity_type === 'node') {
+    $data[$entity_type]['ppglue_prevnext'] = array(
+      'title' => t('Prev Next Links'),
+      'field_type' => DS_FIELD_TYPE_THEME,
+      // 'ui_limit' => array('blog_post|*', ),
+      'properties' => array(
+        'default' => array('wrapper' => 'div', 'link' => 0),
+        'formatters' => array(
+          'ppglue_prevnext' => t('Prev Next Links'), 
+        ),
+      )
+    );
+  }
+	
+	return $data;
+}
+
+/**
+ * Implementation of hook_views_post_render
+ */
+// function ppglue_views_pre_render(&$view) {
+	// dpm($view);
+// }
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function ppglue_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor == 'ckeditor') {
+    $settings['customConfig'] = base_path() . drupal_get_path('module', 'ppglue') . '/ckeditor.config.js';
+  }
+}

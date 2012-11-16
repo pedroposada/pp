@@ -109,7 +109,13 @@ function sky_process_region(&$vars) {
   }
 }
 
-
+/**
+ * Override theme_item_list()
+ */
+function sky_item_list($variables) {
+	// dpm($variables);
+	return theme_item_list($variables);
+}
 
 
 
