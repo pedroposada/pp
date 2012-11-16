@@ -1,6 +1,9 @@
 /* body */
 html, body, .bb-n {
-	background: url(images/bg_body.gif) repeat-x 0 0 #E7FBF8;
+/*	background: url(images/bg_body.gif) repeat-x 0 0 #E7FBF8;*/
+}
+body {
+	padding-bottom: 30px;
 }
 
 /* front page slide show */
@@ -93,17 +96,24 @@ ul.prevnext-list li.next {
 .article_teaser .title{
 	font-size: 24px;
 }
+.teaser-title {
+	font-size: 20px;
+}
 .article_teaser .field-name-body {
 	padding:0;
+}
+.project-teaser-square {
+	padding-top: 10px;
+	margin-bottom: 20px;
 }
 
 /* comments form */
 .comment-form {
 	padding: 5px;
 	background-color: #EEEEEE;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 .comment-form .form-item {
 	margin: 0;
@@ -116,4 +126,9 @@ ul.prevnext-list li.next {
 	padding: 0;
 	text-align: right;
 	margin: 0;
+}
+
+/* bottom of page */
+.region-page-bottom {
+/*	margin-bottom: 30px;*/
 }
